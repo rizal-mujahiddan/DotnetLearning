@@ -32,21 +32,36 @@ namespace ContosoPizza.Controllers
         [HttpPost]
         public IActionResult Create(Pizza pizza)
         {
-            return StatusCode(StatusCodes.Status501NotImplemented);
+            PizzaService.Add(pizza);
+            return CreatedAtAction(nameof(Get), new { id = pizza.Id }, pizza);
         }
 
         // PUT action
         [HttpPut("{id}")]
         public IActionResult Update(int id, Pizza pizza)
         {
-            return StatusCode(StatusCodes.Status501NotImplemented);
+            if (id != pizza.Id) return BadRequest();
+
+            var existingPizza = PizzaService.Get(id);
+
+            if (existingPizza is null) NotFound();
+
+            PizzaService.Update(pizza);
+
+            return NoContent();
         }
 
         // DELETE action
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            return StatusCode(StatusCodes.Status501NotImplemented);
+            var pizza = PizzaService.Get(id);
+
+            if (pizza is null) return NotFound();
+
+            PizzaService.Delete(id);
+
+            return NoContent();
         }
     }
 }
