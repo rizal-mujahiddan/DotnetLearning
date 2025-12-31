@@ -1,0 +1,97 @@
+####################################
+# OS / Editor noise
+####################################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+####################################
+# Visual Studio / Rider / VS Code
+####################################
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+####################################
+# Build results (ALL projects)
+####################################
+**/bin/
+**/obj/
+**/out/
+
+####################################
+# .NET artifacts
+####################################
+*.dll
+*.exe
+*.pdb
+*.cache
+*.nupkg
+*.snupkg
+project.assets.json
+project.lock.json
+
+####################################
+# Publish output
+####################################
+**/publish/
+**/app.publish/
+
+####################################
+# Test / Coverage
+####################################
+TestResults/
+coverage/
+coverage.*
+*.trx
+
+####################################
+# Logs
+####################################
+*.log
+
+####################################
+# Environment / secrets
+####################################
+.env
+.env.*
+secrets.json
+appsettings.*.json
+!appsettings.json
+
+####################################
+# NuGet
+####################################
+.nuget/NuGet.Config
+.nuget/NuGet.targets
+.nuget/NuGet.props
+
+####################################
+# Azure / IIS
+####################################
+.azure/
+*.PublishSettings
+*.pubxml
+*.pubxml.user
+
+####################################
+# JetBrains Rider
+####################################
+*.sln.iml
+
+####################################
+# ReSharper
+####################################
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+####################################
+# Temporary files
+####################################
+*.tmp
+*.temp
