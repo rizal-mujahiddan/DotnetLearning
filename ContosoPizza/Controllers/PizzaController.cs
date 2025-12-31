@@ -29,11 +29,24 @@ namespace ContosoPizza.Controllers
         }
 
         // POST action
+        [HttpPost]
+        public IActionResult Create(Pizza pizza)
+        {
+            return StatusCode(StatusCodes.Status501NotImplemented);
+        }
 
         // PUT action
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, Pizza pizza)
+        {
+            return StatusCode(StatusCodes.Status501NotImplemented);
+        }
 
         // DELETE action
-
-
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            return StatusCode(StatusCodes.Status501NotImplemented);
+        }
     }
 }
